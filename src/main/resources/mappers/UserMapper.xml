@@ -11,7 +11,7 @@
     </insert>
     <select id="selUserByUid">
         SELECT user_id AS userId
-        , IFNULL(nick_name, uid) AS nickName
+        , IF NULL(nick_name, uid) AS nickName
         , upw , pic
         FROM user
         WHERE uid = #{uid} <!-- uid 자리에 asdf 문자열 아무꺼나 써도 괜찮음 -->
