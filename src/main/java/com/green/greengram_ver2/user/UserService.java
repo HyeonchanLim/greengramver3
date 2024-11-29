@@ -32,7 +32,7 @@ public class UserService {
         long userId = p.getUserId();
         String middlePath = String.format("user/%d",userId);
         myFileUtils.makeFolders(middlePath);
-        String filePath = String.format("%s,%s",middlePath,savedPicName);
+        String filePath = String.format("%s/%s",middlePath,savedPicName);
         try {
             myFileUtils.transferTo(pic , filePath);
         }catch (IOException e){
