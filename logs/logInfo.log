@@ -7166,3 +7166,340 @@ DESC LIMIT 0, 1  {executed in 0 ms}
 [2024-11-29 16:51:48 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.close() returned 
 [2024-11-29 16:51:48 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 1. Connection.clearWarnings() returned 
 [2024-11-29 16:51:48 [32mINFO [0;39m http-nio-8080-exec-3] [36m[com.green.greengram_ver2.feed.FeedController][0;39m FeedController > getFeedList > aaaaaaaaa: [com.green.greengram_ver2.feed.model.FeedGetRes@4daa3ac3]
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. Connection.isValid(5) returned true
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. Connection.getAutoCommit() returned true
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. Connection.setAutoCommit(false) returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. Connection.getAutoCommit() returned false
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. Connection.prepareStatement(INSERT INTO feed
+        SET writer_user_id = ?
+            , contents = ?
+            , location = ?, 1) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@349202d1
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.setLong(1, 1) returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.setString(2, "I am panguin") returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.setString(3, "남극") returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. INSERT INTO feed SET writer_user_id = 1 , contents = 'I am panguin' , location = '남극'  {executed in 1 ms}
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.execute() returned false
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.getUpdateCount() returned 1
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. getGeneratedKeys on query: INSERT INTO feed SET writer_user_id = 1 , contents = 'I am panguin' 
+, location = '남극'  {executed in 0 ms}
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. ResultSet.new ResultSet returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.getGeneratedKeys() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@629721
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. ResultSet.getMetaData() returned org.mariadb.jdbc.client.result.ResultSetMetaData@7e1e61df
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. ResultSet.next() returned true
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. ResultSet.getLong(1) returned 21
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 
+|----------|
+|insert_id |
+|----------|
+|21        |
+|----------|
+
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. ResultSet.next() returned false
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. ResultSet.close() returned void
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.close() returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. Connection.prepareStatement(INSERT INTO feed_pics
+        (feed_id , pic)
+        VALUES
+         (  
+            ?, ?
+         )) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@2ef09a6d
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.setLong(1, 21) returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.setString(2, "31fd2b87-1799-4452-9ecb-34c3dcef0361.jpg") returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. INSERT INTO feed_pics (feed_id , pic) VALUES ( 21, '31fd2b87-1799-4452-9ecb-34c3dcef0361.jpg' 
+)  {executed in 0 ms}
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.execute() returned false
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.getUpdateCount() returned 1
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. PreparedStatement.close() returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. Connection.commit() returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. Connection.setAutoCommit(true) returned 
+[2024-11-29 17:08:22 [32mINFO [0;39m http-nio-8080-exec-8] [36m[log4jdbc.log4j2][0;39m 1. Connection.clearWarnings() returned 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 5. Connection.isClosed() returned false
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 5. Connection closed. {executed in 1ms} 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 5. Connection.close() returned 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 5. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 5. Connection.close() returned 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 11. Connection opened. {executed in 3ms} 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 11. Connection.new Connection returned 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 11. Connection.isReadOnly() returned false
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 9. Connection.isClosed() returned false
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 9. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 9. Connection.close() returned 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 9. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 9. Connection.close() returned 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 12. Connection opened. {executed in 2ms} 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 12. Connection.new Connection returned 
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 12. Connection.isReadOnly() returned false
+[2024-11-29 17:18:03 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 12. Connection.getAutoCommit() returned true
+[2024-11-29 17:18:04 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 1. Connection.isClosed() returned false
+[2024-11-29 17:18:04 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 1. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:04 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 1. Connection.close() returned 
+[2024-11-29 17:18:04 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 1. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:04 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 1. Connection.close() returned 
+[2024-11-29 17:18:04 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 13. Connection opened. {executed in 2ms} 
+[2024-11-29 17:18:04 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 13. Connection.new Connection returned 
+[2024-11-29 17:18:04 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 13. Connection.isReadOnly() returned false
+[2024-11-29 17:18:04 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 13. Connection.getAutoCommit() returned true
+[2024-11-29 17:18:13 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 3. Connection.isClosed() returned false
+[2024-11-29 17:18:13 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 3. Connection closed. {executed in 1ms} 
+[2024-11-29 17:18:13 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 3. Connection.close() returned 
+[2024-11-29 17:18:13 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 3. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:13 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 3. Connection.close() returned 
+[2024-11-29 17:18:13 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 14. Connection opened. {executed in 5ms} 
+[2024-11-29 17:18:13 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 14. Connection.new Connection returned 
+[2024-11-29 17:18:13 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 14. Connection.isReadOnly() returned false
+[2024-11-29 17:18:13 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 14. Connection.getAutoCommit() returned true
+[2024-11-29 17:18:16 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 2. Connection.isClosed() returned false
+[2024-11-29 17:18:16 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 2. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:16 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 2. Connection.close() returned 
+[2024-11-29 17:18:16 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 2. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:16 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 2. Connection.close() returned 
+[2024-11-29 17:18:16 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 15. Connection opened. {executed in 3ms} 
+[2024-11-29 17:18:16 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 15. Connection.new Connection returned 
+[2024-11-29 17:18:16 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 15. Connection.isReadOnly() returned false
+[2024-11-29 17:18:16 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 15. Connection.getAutoCommit() returned true
+[2024-11-29 17:18:19 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 4. Connection.isClosed() returned false
+[2024-11-29 17:18:19 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 4. Connection closed. {executed in 1ms} 
+[2024-11-29 17:18:19 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 4. Connection.close() returned 
+[2024-11-29 17:18:19 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 4. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:19 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 4. Connection.close() returned 
+[2024-11-29 17:18:19 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 16. Connection opened. {executed in 5ms} 
+[2024-11-29 17:18:19 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 16. Connection.new Connection returned 
+[2024-11-29 17:18:19 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 16. Connection.isReadOnly() returned false
+[2024-11-29 17:18:19 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 16. Connection.getAutoCommit() returned true
+[2024-11-29 17:18:26 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 7. Connection.isClosed() returned false
+[2024-11-29 17:18:26 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 7. Connection closed. {executed in 1ms} 
+[2024-11-29 17:18:26 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 7. Connection.close() returned 
+[2024-11-29 17:18:26 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 7. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:26 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 7. Connection.close() returned 
+[2024-11-29 17:18:26 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 17. Connection opened. {executed in 3ms} 
+[2024-11-29 17:18:26 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 17. Connection.new Connection returned 
+[2024-11-29 17:18:26 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 17. Connection.isReadOnly() returned false
+[2024-11-29 17:18:26 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 17. Connection.getAutoCommit() returned true
+[2024-11-29 17:18:30 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 6. Connection.isClosed() returned false
+[2024-11-29 17:18:30 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 6. Connection closed. {executed in 1ms} 
+[2024-11-29 17:18:30 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 6. Connection.close() returned 
+[2024-11-29 17:18:30 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 6. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:30 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 6. Connection.close() returned 
+[2024-11-29 17:18:30 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 18. Connection opened. {executed in 6ms} 
+[2024-11-29 17:18:30 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 18. Connection.new Connection returned 
+[2024-11-29 17:18:30 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 18. Connection.isReadOnly() returned false
+[2024-11-29 17:18:30 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 18. Connection.getAutoCommit() returned true
+[2024-11-29 17:18:39 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 8. Connection.isClosed() returned false
+[2024-11-29 17:18:39 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 8. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:39 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 8. Connection.close() returned 
+[2024-11-29 17:18:39 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 8. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:39 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 8. Connection.close() returned 
+[2024-11-29 17:18:39 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 19. Connection opened. {executed in 5ms} 
+[2024-11-29 17:18:39 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 19. Connection.new Connection returned 
+[2024-11-29 17:18:39 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 19. Connection.isReadOnly() returned false
+[2024-11-29 17:18:39 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 19. Connection.getAutoCommit() returned true
+[2024-11-29 17:18:41 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 10. Connection.isClosed() returned false
+[2024-11-29 17:18:41 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 10. Connection closed. {executed in 1ms} 
+[2024-11-29 17:18:41 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 10. Connection.close() returned 
+[2024-11-29 17:18:41 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 10. Connection closed. {executed in 0ms} 
+[2024-11-29 17:18:41 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 10. Connection.close() returned 
+[2024-11-29 17:18:41 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 20. Connection opened. {executed in 6ms} 
+[2024-11-29 17:18:41 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 20. Connection.new Connection returned 
+[2024-11-29 17:18:41 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 20. Connection.isReadOnly() returned false
+[2024-11-29 17:18:41 [32mINFO [0;39m HikariPool-1 connection adder] [36m[log4jdbc.log4j2][0;39m 20. Connection.getAutoCommit() returned true
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[com.green.greengram_ver2.feed.like.FeedLikeController][0;39m FeedLikeController > feedLikeToggle > p: com.green.greengram_ver2.feed.like.model.FeedLikeReq@25387d67
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. Connection.isValid(5) returned true
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. Connection.prepareStatement(DELETE FROM feed_like
+         WHERE feed_id = ?
+           AND user_id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5c40ddd0
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(1, 20) returned 
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(2, 7) returned 
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. DELETE FROM feed_like WHERE feed_id = 20 AND user_id = 7  {executed in 0 ms}
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.execute() returned false
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.getUpdateCount() returned 0
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.close() returned 
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. Connection.clearWarnings() returned 
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. Connection.prepareStatement(INSERT INTO feed_like
+           SET feed_id = ?
+             , user_id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5060cf57
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(1, 20) returned 
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(2, 7) returned 
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. INSERT INTO feed_like SET feed_id = 20 , user_id = 7  {executed in 0 ms}
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.execute() returned false
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.getUpdateCount() returned 1
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.close() returned 
+[2024-11-29 17:29:55 [32mINFO [0;39m http-nio-8080-exec-9] [36m[log4jdbc.log4j2][0;39m 11. Connection.clearWarnings() returned 
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[com.green.greengram_ver2.feed.like.FeedLikeController][0;39m FeedLikeController > feedLikeToggle > p: com.green.greengram_ver2.feed.like.model.FeedLikeReq@26d13555
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[log4jdbc.log4j2][0;39m 11. Connection.isValid(5) returned true
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[log4jdbc.log4j2][0;39m 11. Connection.prepareStatement(DELETE FROM feed_like
+         WHERE feed_id = ?
+           AND user_id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@63d3afeb
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(1, 20) returned 
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(2, 7) returned 
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[log4jdbc.log4j2][0;39m 11. DELETE FROM feed_like WHERE feed_id = 20 AND user_id = 7  {executed in 0 ms}
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.execute() returned false
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.getUpdateCount() returned 1
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.close() returned 
+[2024-11-29 17:30:11 [32mINFO [0;39m http-nio-8080-exec-10] [36m[log4jdbc.log4j2][0;39m 11. Connection.clearWarnings() returned 
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[com.green.greengram_ver2.feed.like.FeedLikeController][0;39m FeedLikeController > feedLikeToggle > p: com.green.greengram_ver2.feed.like.model.FeedLikeReq@2a3ddb62
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. Connection.isValid(5) returned true
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. Connection.prepareStatement(DELETE FROM feed_like
+         WHERE feed_id = ?
+           AND user_id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@76ba3e0f
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(1, 20) returned 
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(2, 7) returned 
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. DELETE FROM feed_like WHERE feed_id = 20 AND user_id = 7  {executed in 0 ms}
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.execute() returned false
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.getUpdateCount() returned 0
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.close() returned 
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. Connection.clearWarnings() returned 
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. Connection.prepareStatement(INSERT INTO feed_like
+           SET feed_id = ?
+             , user_id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1b5db398
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(1, 20) returned 
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(2, 7) returned 
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. INSERT INTO feed_like SET feed_id = 20 , user_id = 7  {executed in 15 ms}
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.execute() returned false
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.getUpdateCount() returned 1
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.close() returned 
+[2024-11-29 17:30:14 [32mINFO [0;39m http-nio-8080-exec-4] [36m[log4jdbc.log4j2][0;39m 11. Connection.clearWarnings() returned 
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[com.green.greengram_ver2.feed.like.FeedLikeController][0;39m FeedLikeController > feedLikeToggle > p: com.green.greengram_ver2.feed.like.model.FeedLikeReq@6e2ab6ae
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[log4jdbc.log4j2][0;39m 11. Connection.isValid(5) returned true
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[log4jdbc.log4j2][0;39m 11. Connection.prepareStatement(DELETE FROM feed_like
+         WHERE feed_id = ?
+           AND user_id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@186d922a
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(1, 20) returned 
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(2, 7) returned 
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[log4jdbc.log4j2][0;39m 11. DELETE FROM feed_like WHERE feed_id = 20 AND user_id = 7  {executed in 15 ms}
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.execute() returned false
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.getUpdateCount() returned 1
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.close() returned 
+[2024-11-29 17:30:15 [32mINFO [0;39m http-nio-8080-exec-7] [36m[log4jdbc.log4j2][0;39m 11. Connection.clearWarnings() returned 
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[com.green.greengram_ver2.feed.like.FeedLikeController][0;39m FeedLikeController > feedLikeToggle > p: com.green.greengram_ver2.feed.like.model.FeedLikeReq@67a24db1
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. Connection.isValid(5) returned true
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. Connection.prepareStatement(DELETE FROM feed_like
+         WHERE feed_id = ?
+           AND user_id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@af0da80
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(1, 20) returned 
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(2, 7) returned 
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. DELETE FROM feed_like WHERE feed_id = 20 AND user_id = 7  {executed in 0 ms}
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.execute() returned false
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.getUpdateCount() returned 0
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.close() returned 
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. Connection.clearWarnings() returned 
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. Connection.prepareStatement(INSERT INTO feed_like
+           SET feed_id = ?
+             , user_id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@560f6f43
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(1, 20) returned 
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(2, 7) returned 
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. INSERT INTO feed_like SET feed_id = 20 , user_id = 7  {executed in 0 ms}
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.execute() returned false
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.getUpdateCount() returned 1
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.close() returned 
+[2024-11-29 17:30:16 [32mINFO [0;39m http-nio-8080-exec-2] [36m[log4jdbc.log4j2][0;39m 11. Connection.clearWarnings() returned 
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[com.green.greengram_ver2.feed.like.FeedLikeController][0;39m FeedLikeController > feedLikeToggle > p: com.green.greengram_ver2.feed.like.model.FeedLikeReq@1cb35aa3
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 11. Connection.isValid(5) returned true
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 11. Connection.prepareStatement(DELETE FROM feed_like
+         WHERE feed_id = ?
+           AND user_id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@4e49d42b
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(1, 20) returned 
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(2, 7) returned 
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 11. DELETE FROM feed_like WHERE feed_id = 20 AND user_id = 7  {executed in 0 ms}
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.execute() returned false
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.getUpdateCount() returned 1
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.close() returned 
+[2024-11-29 17:30:21 [32mINFO [0;39m http-nio-8080-exec-3] [36m[log4jdbc.log4j2][0;39m 11. Connection.clearWarnings() returned 
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[com.green.greengram_ver2.feed.like.FeedLikeController][0;39m FeedLikeController > feedLikeToggle > p: com.green.greengram_ver2.feed.like.model.FeedLikeReq@20129c50
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. Connection.isValid(5) returned true
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. Connection.prepareStatement(DELETE FROM feed_like
+         WHERE feed_id = ?
+           AND user_id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@cf91ae1
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(1, 20) returned 
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(2, 7) returned 
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. DELETE FROM feed_like WHERE feed_id = 20 AND user_id = 7  {executed in 0 ms}
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.execute() returned false
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.getUpdateCount() returned 0
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.close() returned 
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. Connection.clearWarnings() returned 
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. Connection.getAutoCommit() returned true
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.new PreparedStatement returned 
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. Connection.prepareStatement(INSERT INTO feed_like
+           SET feed_id = ?
+             , user_id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@11f859db
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(1, 20) returned 
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.setLong(2, 7) returned 
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. INSERT INTO feed_like SET feed_id = 20 , user_id = 7  {executed in 0 ms}
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.execute() returned false
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.getUpdateCount() returned 1
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. PreparedStatement.close() returned 
+[2024-11-29 17:30:31 [32mINFO [0;39m http-nio-8080-exec-6] [36m[log4jdbc.log4j2][0;39m 11. Connection.clearWarnings() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m SpringApplicationShutdownHook] [36m[com.zaxxer.hikari.HikariDataSource][0;39m HikariPool-1 - Shutdown initiated...
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 11. Connection.isClosed() returned false
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 11. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 11. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 11. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 11. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 12. Connection.isClosed() returned false
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 12. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 12. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 12. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 12. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 13. Connection.isClosed() returned false
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 13. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 13. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 13. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 13. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 14. Connection.isClosed() returned false
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 14. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 14. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 14. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 14. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 15. Connection.isClosed() returned false
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 15. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 15. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 15. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 15. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 16. Connection.isClosed() returned false
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 16. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 16. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 16. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 16. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 17. Connection.isClosed() returned false
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 17. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 17. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 17. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 17. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 18. Connection.isClosed() returned false
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 18. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 18. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 18. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 18. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 19. Connection.isClosed() returned false
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 19. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 19. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 19. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 19. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 20. Connection.isClosed() returned false
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 20. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 20. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 20. Connection closed. {executed in 0ms} 
+[2024-11-29 17:41:27 [32mINFO [0;39m HikariPool-1 connection closer] [36m[log4jdbc.log4j2][0;39m 20. Connection.close() returned 
+[2024-11-29 17:41:27 [32mINFO [0;39m SpringApplicationShutdownHook] [36m[com.zaxxer.hikari.HikariDataSource][0;39m HikariPool-1 - Shutdown completed.
