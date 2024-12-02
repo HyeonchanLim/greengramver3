@@ -1,7 +1,10 @@
 package com.green.greengram_ver2.feed;
 
 import com.green.greengram_ver2.common.MyFileUtils;
-import com.green.greengram_ver2.common.model.ResultResponse;
+import com.green.greengram_ver2.feed.comment.FeedCommentMapper;
+import com.green.greengram_ver2.feed.comment.model.FeedCommentDto;
+import com.green.greengram_ver2.feed.comment.model.FeedCommentGetReq;
+import com.green.greengram_ver2.feed.comment.model.FeedCommentGetRes;
 import com.green.greengram_ver2.feed.model.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +23,7 @@ public class FeedService {
     private final FeedMapper mapper;
     private final FeedPicsMapper feedPicsMapper;
     private final MyFileUtils myFileUtils;
+    private final FeedCommentMapper feedCommentMapper;
 
     @Transactional
     // 애노테이션 걸어두면 구현부 중간에 오류가 발생하면 아예 실행 X
@@ -47,6 +51,7 @@ public class FeedService {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            // 피드 하나당 사진이 여러개 -> 1 : n 관계  - for 문으로 반복
         }
         FeedPicDto feedPicDto = new FeedPicDto();
         feedPicDto.setPics(picNameList);
@@ -65,8 +70,30 @@ public class FeedService {
     }
 
     List<FeedGetRes> selFeedList (FeedGetReq p){
+        // n + 1 이슈 발생 -> 리스트를 만들었기 때문에 리스트 가져오는데 +1회가 발생함
         List<FeedGetRes> list = mapper.selFeedList(p);
+        //피드 당 사진
+        for (FeedGetRes item : list){
+            // 피드 당 사진 리스트
+            item.setPics(feedPicsMapper.selFeedPicList(item.getFeedId()));
 
+            // 피드 당 댓글 4개
+            FeedCommentGetReq commentGetReq = new FeedCommentGetReq();
+            commentGetReq.setPage(1); // 댓글 첫 페이지
+            commentGetReq.setFeedId(item.getFeedId());
+
+            List<FeedCommentDto> commentList = feedCommentMapper.selFeedCommentList(commentGetReq);
+
+            FeedCommentGetRes commentGetRes = new FeedCommentGetRes();
+            commentGetRes.setCommentList(commentList);
+            commentGetRes.setMoreComment(commentList.size() == 4);
+
+            if (commentGetRes.isMoreComment()){
+                commentList.remove(commentList.size()-1);
+            }
+            item.setComment(commentGetRes);
+            // 코멘트 값 설정 1 or 0 , 4개면 true , 아니면 false
+        }
         return list;
     }
 }

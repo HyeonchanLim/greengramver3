@@ -4,6 +4,7 @@ import com.green.greengram_ver2.feed.like.model.FeedLikeReq;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Service
 @Slf4j
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 public class FeedLikeService {
     private final FeedLikeMapper mapper;
 
+    @PostMapping
     public Integer feedLikeToggle (FeedLikeReq p){
         int result = mapper.delFeedLike(p);
         if (result == 0){
