@@ -18080,3 +18080,54 @@ B ON A.user_id = B.user_id WHERE feed_id = 25 ORDER BY feed_comment_id DESC LIMI
 [2024-12-02 17:16:01 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.embedded.tomcat.TomcatWebServer][0;39m Tomcat started on port 8080 (http) with context path '/'
 [2024-12-02 17:16:01 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.GreenGramVer2Application][0;39m Started GreenGramVer2Application in 0.336 seconds (process running for 1261.66)
 [2024-12-02 17:16:01 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener][0;39m Condition evaluation unchanged
+[2024-12-02 17:32:05 [32mINFO [0;39m File Watcher] [36m[org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener][0;39m Restarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)
+[2024-12-02 17:32:05 [32mINFO [0;39m Thread-11] [36m[org.apache.coyote.http11.Http11NioProtocol][0;39m Stopping ProtocolHandler ["http-nio-8080"]
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.GreenGramVer2Application][0;39m Starting GreenGramVer2Application using Java 17.0.12 with PID 10612 (D:\LHC\GreenGram_Ver2\build\classes\java\main started by Administrator in D:\LHC\GreenGram_Ver2)
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.GreenGramVer2Application][0;39m No active profile set, falling back to 1 default profile: "default"
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.embedded.tomcat.TomcatWebServer][0;39m Tomcat initialized with port 8080 (http)
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[org.apache.coyote.http11.Http11NioProtocol][0;39m Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[org.apache.catalina.core.StandardService][0;39m Starting service [Tomcat]
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[org.apache.catalina.core.StandardEngine][0;39m Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]][0;39m Initializing Spring embedded WebApplicationContext
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][0;39m Root WebApplicationContext: initialization completed in 168 ms
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.common.MyFileUtils][0;39m MyFileUtils - 생성자: D:/2024-02/download/greengram_ver2
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping][0;39m Adding welcome page: class path resource [static/index.html]
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer][0;39m LiveReload server is running on port 35729
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[org.apache.coyote.http11.Http11NioProtocol][0;39m Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.embedded.tomcat.TomcatWebServer][0;39m Tomcat started on port 8080 (http) with context path '/'
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.GreenGramVer2Application][0;39m Started GreenGramVer2Application in 0.301 seconds (process running for 2225.675)
+[2024-12-02 17:32:05 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener][0;39m Condition evaluation unchanged
+[2024-12-02 17:38:44 [32mINFO [0;39m File Watcher] [36m[org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener][0;39m Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+[2024-12-02 17:38:44 [32mINFO [0;39m Thread-15] [36m[org.apache.coyote.http11.Http11NioProtocol][0;39m Stopping ProtocolHandler ["http-nio-8080"]
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.GreenGramVer2Application][0;39m Starting GreenGramVer2Application using Java 17.0.12 with PID 10612 (D:\LHC\GreenGram_Ver2\build\classes\java\main started by Administrator in D:\LHC\GreenGram_Ver2)
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.GreenGramVer2Application][0;39m No active profile set, falling back to 1 default profile: "default"
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.embedded.tomcat.TomcatWebServer][0;39m Tomcat initialized with port 8080 (http)
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[org.apache.coyote.http11.Http11NioProtocol][0;39m Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[org.apache.catalina.core.StandardService][0;39m Starting service [Tomcat]
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[org.apache.catalina.core.StandardEngine][0;39m Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]][0;39m Initializing Spring embedded WebApplicationContext
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][0;39m Root WebApplicationContext: initialization completed in 162 ms
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.common.MyFileUtils][0;39m MyFileUtils - 생성자: D:/2024-02/download/greengram_ver2
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping][0;39m Adding welcome page: class path resource [static/index.html]
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer][0;39m LiveReload server is running on port 35729
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[org.apache.coyote.http11.Http11NioProtocol][0;39m Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.embedded.tomcat.TomcatWebServer][0;39m Tomcat started on port 8080 (http) with context path '/'
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.GreenGramVer2Application][0;39m Started GreenGramVer2Application in 0.291 seconds (process running for 2625.346)
+[2024-12-02 17:38:45 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener][0;39m Condition evaluation unchanged
+[2024-12-02 17:52:37 [32mINFO [0;39m File Watcher] [36m[org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener][0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+[2024-12-02 17:52:37 [32mINFO [0;39m Thread-19] [36m[org.apache.coyote.http11.Http11NioProtocol][0;39m Stopping ProtocolHandler ["http-nio-8080"]
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.GreenGramVer2Application][0;39m Starting GreenGramVer2Application using Java 17.0.12 with PID 10612 (D:\LHC\GreenGram_Ver2\build\classes\java\main started by Administrator in D:\LHC\GreenGram_Ver2)
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.GreenGramVer2Application][0;39m No active profile set, falling back to 1 default profile: "default"
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.embedded.tomcat.TomcatWebServer][0;39m Tomcat initialized with port 8080 (http)
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[org.apache.coyote.http11.Http11NioProtocol][0;39m Initializing ProtocolHandler ["http-nio-8080"]
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[org.apache.catalina.core.StandardService][0;39m Starting service [Tomcat]
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[org.apache.catalina.core.StandardEngine][0;39m Starting Servlet engine: [Apache Tomcat/10.1.33]
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]][0;39m Initializing Spring embedded WebApplicationContext
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][0;39m Root WebApplicationContext: initialization completed in 174 ms
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.common.MyFileUtils][0;39m MyFileUtils - 생성자: D:/2024-02/download/greengram_ver2
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping][0;39m Adding welcome page: class path resource [static/index.html]
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer][0;39m LiveReload server is running on port 35729
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[org.apache.coyote.http11.Http11NioProtocol][0;39m Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.embedded.tomcat.TomcatWebServer][0;39m Tomcat started on port 8080 (http) with context path '/'
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[com.green.greengram_ver2.GreenGramVer2Application][0;39m Started GreenGramVer2Application in 0.319 seconds (process running for 3457.453)
+[2024-12-02 17:52:37 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener][0;39m Condition evaluation unchanged

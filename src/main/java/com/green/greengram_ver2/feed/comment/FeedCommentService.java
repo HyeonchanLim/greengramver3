@@ -17,5 +17,4 @@ public class FeedCommentService {
         int result = mapper.insFeedComment(p);
         return p.getFeedCommentId();
     }
-
 }
