@@ -72,28 +72,34 @@ public class FeedService {
     List<FeedGetRes> selFeedList (FeedGetReq p){
         // n + 1 이슈 발생 -> 리스트를 만들었기 때문에 리스트 가져오는데 +1회가 발생함
         List<FeedGetRes> list = mapper.selFeedList(p);
-        //피드 당 사진
+        //피드 당 사진 , item - feedid 각각의 튜플들 담아서 사용
+        // 1번 feedid 작업 끝나면 다음 feedid 넘어가면서 계속 진행(for문 반복)
         for (FeedGetRes item : list){
             // 피드 당 사진 리스트
+
             item.setPics(feedPicsMapper.selFeedPicList(item.getFeedId()));
 
             // 피드 당 댓글 4개
-            FeedCommentGetReq commentGetReq = new FeedCommentGetReq();
-            commentGetReq.setPage(1); // 댓글 첫 페이지
-            commentGetReq.setFeedId(item.getFeedId());
+            FeedCommentGetReq commentGetReq = new FeedCommentGetReq(item.getFeedId(), 0, 3);
 
             List<FeedCommentDto> commentList = feedCommentMapper.selFeedCommentList(commentGetReq);
-
+            // commentdto 타입 & xml에서 설정한 튜플들로 목록 설정 ->
+            // 매개변수 자체가 튜플이라 생각
+            // 튜플에 대응하는 컬럼을 작성 -> 2개 이상이라면 list
             FeedCommentGetRes commentGetRes = new FeedCommentGetRes();
             commentGetRes.setCommentList(commentList);
-            commentGetRes.setMoreComment(commentList.size() == 4);
+            commentGetRes.setMoreComment(commentList.size() == commentGetReq.getSize());
 
             if (commentGetRes.isMoreComment()){
                 commentList.remove(commentList.size()-1);
             }
             item.setComment(commentGetRes);
             // 코멘트 값 설정 1 or 0 , 4개면 true , 아니면 false
+
+            // 댓글 0 페이지에서 시작 부분은 0,4 -> 만약 댓글을 삭제하면 3으로 바뀌는데 더 보기 누를 경우 3, 20
+            // 1개 더 삭제하면 2, 20 으로 시작
         }
         return list;
+
     }
 }

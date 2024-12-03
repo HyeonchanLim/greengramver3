@@ -10,6 +10,8 @@
              , `comment` = #{comment}
     </insert>
 
+    <!-- feedservice 에서는 댓글 4개 설정 -> 더보기 있냐 없냐 확인
+     feedcommentservice 에서는 더보기 출력 -> 더보기 할 댓글 갯수 지정하고 출력 -->
     <select id="selFeedCommentList">
         SELECT A.feed_comment_id AS feedCommentId , A.comment
              , B.user_id AS writerUserId
@@ -23,8 +25,10 @@
         LIMIT #{startIdx} , #{size}
     </select>
 
+    <!-- 삭제 시 받아야 할 데이터 feedCommentId , 로그인한 사용자의 pk  -->
     <delete id="delFeedComment">
         DELETE FROM feed_comments
-        WHERE feed_comment_id AS feedCommentId
+        WHERE feed_comment_id = #{feedCommentId}
+        AND user_id = #{userId}
     </delete>
 </mapper>

@@ -15,3 +15,4 @@ public class FeedPicDto {
     @Schema(title = "사진")
     private List<String> pics;
 }
+
