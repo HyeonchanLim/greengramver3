@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class FeedLikeService {
     private final FeedLikeMapper mapper;
 
+    // 토글 방식 진행 과정 ->
+    // 값이 0 이다 -> 값을 입력 -> 1로 변경
+    // 값이 0 이 아니다 -> 0 리턴
     @PostMapping
     public Integer feedLikeToggle (FeedLikeReq p){
         int result = mapper.delFeedLike(p);

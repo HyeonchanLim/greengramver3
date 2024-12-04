@@ -69,14 +69,13 @@ public class FeedService {
                 .build();
     }
 
-    List<FeedGetRes> selFeedList (FeedGetReq p){
+    public List<FeedGetRes> selFeedList (FeedGetReq p){
         // n + 1 이슈 발생 -> 리스트를 만들었기 때문에 리스트 가져오는데 +1회가 발생함
         List<FeedGetRes> list = mapper.selFeedList(p);
         //피드 당 사진 , item - feedid 각각의 튜플들 담아서 사용
         // 1번 feedid 작업 끝나면 다음 feedid 넘어가면서 계속 진행(for문 반복)
         for (FeedGetRes item : list){
             // 피드 당 사진 리스트
-
             item.setPics(feedPicsMapper.selFeedPicList(item.getFeedId()));
 
             // 피드 당 댓글 4개

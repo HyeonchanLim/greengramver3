@@ -1,15 +1,10 @@
 package com.green.greengram_ver2.feed.comment;
 
 import com.green.greengram_ver2.common.model.ResultResponse;
-import com.green.greengram_ver2.feed.comment.model.FeedCommentDelReq;
-import com.green.greengram_ver2.feed.comment.model.FeedCommentGetReq;
-import com.green.greengram_ver2.feed.comment.model.FeedCommentGetRes;
-import com.green.greengram_ver2.feed.comment.model.FeedCommentPostReq;
-import com.green.greengram_ver2.feed.like.model.FeedLikeReq;
+import com.green.greengram_ver2.feed.comment.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.servlet.http.PushBuilder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.annotations.ParameterObject;

@@ -33,6 +33,8 @@ public class FeedGetRes {
     private List<String> pics;
     @Schema(title = "피드 댓글")
     private FeedCommentGetRes comment;
+    // getres 에 작성한 이유는 프론트에서 더보기 여부 + 댓글 더 있는지 체크 하는걸 중복 데이터
+    // 보낼 이유가 없어서 따로 분리해서 작성함
     // 댓글이 더 있냐 없냐 확인 + list(commentdto) 목록
 
 }

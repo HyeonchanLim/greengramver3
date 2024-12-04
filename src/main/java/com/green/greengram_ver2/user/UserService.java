@@ -35,6 +35,7 @@ public class UserService {
         String filePath = String.format("%s/%s",middlePath,savedPicName);
         try {
             myFileUtils.transferTo(pic , filePath);
+            // 임시파일에 있는 pic 을 filepath (저장하고 싶은 경로) 위치로
         }catch (IOException e){
             e.printStackTrace();
         }

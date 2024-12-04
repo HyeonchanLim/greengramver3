@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 @Slf4j
-@Component //빈등록
+@Component //빈등록으로 @Value 사용 가능
 public class MyFileUtils {
     private final String uploadPath;
 
@@ -21,6 +21,9 @@ public class MyFileUtils {
 
     public String makeFolders(String path) {
         File file = new File(uploadPath, path);
+        // file ( " " ) 한번에
+        // file ( "" , "" ) 1+1 = 2 ,는 / 로 변경되서 합쳐짐
+        // 확장자 없어서 디렉토리일 확률이 엄청 높음
         if(!file.exists()) {
             file.mkdirs();
         }
