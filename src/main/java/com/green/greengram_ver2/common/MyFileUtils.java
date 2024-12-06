@@ -7,11 +7,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+
 import java.util.UUID;
 
 @Slf4j
 @Component //빈등록으로 @Value 사용 가능
 public class MyFileUtils {
+
+
     private final String uploadPath;
 
     public MyFileUtils(@Value("${file.directory}") String uploadPath) {
