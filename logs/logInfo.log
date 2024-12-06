@@ -22913,3 +22913,8 @@ java.lang.IllegalArgumentException: Invalid character found in the HTTP protocol
 [2024-12-06 17:10:15 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][0;39m Root WebApplicationContext: initialization completed in 202 ms
 [2024-12-06 17:10:15 [32mINFO [0;39m restartedMain] [36m[com.green.greengram.common.MyFileUtils][0;39m MyFileUtils - 생성자: D:/2024-02/download/greengram_ver3
 [2024-12-06 17:10:15 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping][0;39m Adding welcome page: class path resource [static/index.html]
+[2024-12-06 17:10:15 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer][0;39m LiveReload server is running on port 35729
+[2024-12-06 17:10:15 [32mINFO [0;39m restartedMain] [36m[org.apache.coyote.http11.Http11NioProtocol][0;39m Starting ProtocolHandler ["http-nio-8080"]
+[2024-12-06 17:10:15 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.web.embedded.tomcat.TomcatWebServer][0;39m Tomcat started on port 8080 (http) with context path '/'
+[2024-12-06 17:10:15 [32mINFO [0;39m restartedMain] [36m[com.green.greengram.GreenGramVer2Application][0;39m Started GreenGramVer2Application in 0.371 seconds (process running for 8923.781)
+[2024-12-06 17:10:15 [32mINFO [0;39m restartedMain] [36m[org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener][0;39m Condition evaluation unchanged
