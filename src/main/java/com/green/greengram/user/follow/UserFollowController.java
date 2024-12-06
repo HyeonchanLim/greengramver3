@@ -1,14 +1,11 @@
 package com.green.greengram.user.follow;
 
 import com.green.greengram.common.model.ResultResponse;
-import com.green.greengram.feed.comment.FeedCommentMapper;
 import com.green.greengram.user.follow.model.UserFollowReq;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.web.bind.annotation.*;
-
-import javax.xml.transform.Result;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -16,7 +13,6 @@ import javax.xml.transform.Result;
 @RequestMapping("user/follow")
 public class UserFollowController {
     private final UserFollowService service;
-    private final FeedCommentMapper feedCommentMapper;
 
     // 팔로우 신청
     // @RequestBody 요청을 보내는 자가 body 에 json 형태의 데이터를 담아서 보낸다.
