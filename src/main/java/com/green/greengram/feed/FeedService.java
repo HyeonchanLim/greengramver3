@@ -99,6 +99,18 @@ public class FeedService {
             // 1개 더 삭제하면 2, 20 으로 시작
         }
         return list;
+    }
+    @Transactional
+    public int deleteFeed(FeedDeleteReq p) {
+        //피드 사진 삭제
+        String deletePath = String.format("%s/feed/%d", myFileUtils.getUploadPath(), p.getFeedId());
+        myFileUtils.deleteFolder(deletePath, true);
 
+        //피드 댓글, 좋아요 삭제
+        int affectedRows = mapper.delFeedLikeAndFeedCommentAndFeedPic(p);
+        log.info("affectedRows: {}", affectedRows);
+
+        //피드 삭제
+        return mapper.delFeed(p);
     }
 }

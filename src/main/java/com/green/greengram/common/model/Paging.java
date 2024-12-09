@@ -2,6 +2,7 @@ package com.green.greengram.common.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.green.greengram.common.Constants;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -9,7 +10,9 @@ import lombok.ToString;
 @ToString
 public class Paging {
     private final static int DEFAULT = 10;
+    @Schema(example = "1")
     private int size;
+    @Schema(example = "2")
     private int page;
     @JsonIgnore
     private int startIdx;

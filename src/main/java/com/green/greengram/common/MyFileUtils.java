@@ -8,14 +8,17 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.IOException;
 
+import java.lang.reflect.Field;
 import java.util.UUID;
 
 @Slf4j
 @Component //빈등록으로 @Value 사용 가능
 public class MyFileUtils {
-
-
     private final String uploadPath;
+
+    public String getUploadPath() {
+        return uploadPath;
+    }
 
     public MyFileUtils(@Value("${file.directory}") String uploadPath) {
         log.info("MyFileUtils - 생성자: {}", uploadPath);
@@ -50,5 +53,28 @@ public class MyFileUtils {
     public void transferTo(MultipartFile mf, String path) throws IOException {
         File file = new File(uploadPath, path);
         mf.transferTo(file);
+    }
+    // 폴더 삭제 , e.g."user/1"
+    // 폴더삭제 x -> 폴더 안에 내용물만 삭제
+    public void deleteFolder(String path , boolean deleteRootFolder){
+        File folder = new File(path);
+        //file.delete(); // 폴더 아래 파일 , 폴더가 없어야 지울 수 있음 그래서 파일 삭제 필요
+        if(folder.exists() && folder.isDirectory()){ // 폴더가 존재하면서 디렉토리인가? 확인
+            File[] includeFiles = folder.listFiles(); // 존재하는거만 넘겨줌
+            // 파일인지 디렉토리인지 확인 절차 필요 why ? 파일 안에 내용물 있으면 삭제 불가능하기 때문
+            // 디렉토리에 파일이 있는지 체크 -> 있으면 파일 제거하고 디렉토리 제거 , 없으면 디렉토리 제거
+            // 재귀호출과 같음
+            for (File f : includeFiles){
+                if (f.isDirectory()){
+                    deleteFolder(f.getAbsolutePath() , true);
+                } else {
+                    f.delete();
+                }
+            }
+            // true 일 경우에만 폴더 삭제
+            if (deleteRootFolder){
+                folder.delete();
+            }
+        }
     }
 }

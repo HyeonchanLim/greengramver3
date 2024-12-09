@@ -1,10 +1,7 @@
 package com.green.greengram.feed;
 
 import com.green.greengram.common.model.ResultResponse;
-import com.green.greengram.feed.model.FeedGetReq;
-import com.green.greengram.feed.model.FeedGetRes;
-import com.green.greengram.feed.model.FeedPostReq;
-import com.green.greengram.feed.model.FeedPostRes;
+import com.green.greengram.feed.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -43,6 +40,16 @@ public class FeedController {
         return ResultResponse.<List<FeedGetRes>>builder()
                 .resultMessage(String.format("%d rows", list.size()))
                 .resultData(list)
+                .build();
+    }
+    @DeleteMapping
+    @Operation(summary = "feed 삭제" , description = "피드의 댓글 , 좋아요 전부 삭제 처리")
+    public ResultResponse<Integer> deleteFeed(@ParameterObject @ModelAttribute FeedDeleteReq p){
+        log.info("FeedController > deleteFeed > p: {}" , p);
+        int result = service.deleteFeed(p);
+        return ResultResponse.<Integer>builder()
+                .resultMessage("삭제 완료")
+                .resultData(result)
                 .build();
     }
 
