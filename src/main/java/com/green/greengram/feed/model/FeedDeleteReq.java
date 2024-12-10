@@ -11,6 +11,7 @@ import java.beans.ConstructorProperties;
 public class FeedDeleteReq {
     @Schema(description = "피드 PK", example = "2", requiredMode = Schema.RequiredMode.REQUIRED)
     private long feedId;
+    //signeduserid 는 jwt 넘어가면 jsonignore 처리 할꺼임
     @Schema(description = "로그인 유저 PK", example = "1", requiredMode = Schema.RequiredMode.REQUIRED)
     private long signedUserId;
 

@@ -71,6 +71,7 @@ public class FeedService {
 
     public List<FeedGetRes> selFeedList (FeedGetReq p){
         // n + 1 이슈 발생 -> 리스트를 만들었기 때문에 리스트 가져오는데 +1회가 발생함
+        // 피드 20 * 2번 + 리스트 1 -> 41번 실행
         List<FeedGetRes> list = mapper.selFeedList(p);
         //피드 당 사진 , item - feedid 각각의 튜플들 담아서 사용
         // 1번 feedid 작업 끝나면 다음 feedid 넘어가면서 계속 진행(for문 반복)
@@ -100,17 +101,25 @@ public class FeedService {
         }
         return list;
     }
+
+    public List<FeedGetRes> getFeedList3(FeedGetReq p){
+        List<FeedGetRes> list = mapper.selFeedList(p);
+        return null;
+    }
     @Transactional
     public int deleteFeed(FeedDeleteReq p) {
-        //피드 사진 삭제
-        String deletePath = String.format("%s/feed/%d", myFileUtils.getUploadPath(), p.getFeedId());
-        myFileUtils.deleteFolder(deletePath, true);
-
-        //피드 댓글, 좋아요 삭제
+        //피드 댓글, 좋아요 , 사진 삭제
         int affectedRows = mapper.delFeedLikeAndFeedCommentAndFeedPic(p);
         log.info("affectedRows: {}", affectedRows);
 
         //피드 삭제
-        return mapper.delFeed(p);
+        int affectedRowsFeed = mapper.delFeed(p);
+        log.info("FeedService > deleteFeed > affectedRowsFeed : {}" , affectedRowsFeed);
+
+        //피드 사진 , 폴더 삭제
+        String deletePath = String.format("%s/feed/%d", myFileUtils.getUploadPath(), p.getFeedId());
+        myFileUtils.deleteFolder(deletePath, true);
+
+        return 1;
     }
 }
