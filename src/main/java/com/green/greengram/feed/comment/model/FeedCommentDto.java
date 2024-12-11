@@ -1,5 +1,6 @@
 package com.green.greengram.feed.comment.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,6 +9,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class FeedCommentDto {
+    @JsonIgnore
+    private long feedId;
     @Schema(title = "피드 댓글 PK")
     private long writerUserId;
     @Schema(title = "피드 댓글 내용")

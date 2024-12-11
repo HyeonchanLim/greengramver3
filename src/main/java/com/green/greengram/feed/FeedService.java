@@ -5,6 +5,7 @@ import com.green.greengram.feed.comment.FeedCommentMapper;
 import com.green.greengram.feed.comment.model.FeedCommentDto;
 import com.green.greengram.feed.comment.model.FeedCommentGetReq;
 import com.green.greengram.feed.comment.model.FeedCommentGetRes;
+import com.green.greengram.feed.comment.model.FeedPicSel;
 import com.green.greengram.feed.model.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +15,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -102,9 +106,79 @@ public class FeedService {
         return list;
     }
 
+    public List<FeedGetRes> getFeedList2(FeedGetReq p){
+        return null;
+    }
     public List<FeedGetRes> getFeedList3(FeedGetReq p){
         List<FeedGetRes> list = mapper.selFeedList(p);
-        return null;
+
+        List<Long> feedIds4 = list.stream().map(FeedGetRes::getFeedId).collect(Collectors.toList());
+        List<Long> feedIds5 = list.stream().map(item -> ((FeedGetRes)item).getFeedId()).toList();
+        List<Long> feedIds6 = list.stream().map(item -> { return ((FeedGetRes)item).getFeedId();}).toList();
+        List<Long> feedIds = new ArrayList<>(list.size());
+        for(FeedGetRes item : list) {
+            feedIds.add(item.getFeedId());
+        }
+        // feedIds 배열 - getres 타입의 feedid 입력
+        log.info("feedIds: {}", feedIds);
+        //피드와 관련된 사진 리스트
+        List<FeedPicSel> feedPicList = feedpicMapper.selFeedPicListByFeedIds(feedIds);
+        // feedids 가 가지고 있는 feedid 를 이용해서 pic 입력하게 설정 / 현재 pic 없음
+        log.info("feedPicList: {}", feedPicList);
+        // Map - key & value 쌍으로 데이터를 저장하는 인터페이스
+        // 키는 고유값 , 하나의 키에 하나의 값만 매핑 가능
+        // 값은 중복 가능 , 키는 중복 불가능
+        Map<Long, List<String>> picHashMap = new HashMap<>();
+        // Long (feedId) , List<String> (pic) 을 HashMap 으로 찍어낼꺼임
+        for(FeedPicSel item : feedPicList) {
+            long feedId = item.getFeedId();
+            if(!picHashMap.containsKey(feedId)) {
+                // 피드id 가 현재 있는지 확인 절차
+                picHashMap.put(feedId, new ArrayList<String>(2));
+                // 피드id 가 없다면 해당 피드id에 배열(value - pic) 생성
+            }
+            List<String> pics = picHashMap.get(feedId);
+            // feedId (key) 를 pics 에 입력하면서 value인 List<String> (pic) 을 가져옴
+            pics.add(item.getPic());
+            // value 인 pic 을 feedId 에 추가
+        }
+
+        //피드와 관련된 댓글 리스트
+        List<FeedCommentDto> feedCommentList = feedCommentMapper.selFeedCommentListByFeedIdsLimit4(feedIds);
+
+        Map<Long, FeedCommentGetRes> commentHashMap = new HashMap<>();
+        for(FeedCommentDto item : feedCommentList) {
+            long feedId = item.getFeedId();
+            if(!commentHashMap.containsKey(feedId)) {
+                FeedCommentGetRes feedCommentGetRes = new FeedCommentGetRes();
+                feedCommentGetRes.setCommentList(new ArrayList<>(4));
+                commentHashMap.put(feedId, feedCommentGetRes); // key - value 셋팅
+            }
+            FeedCommentGetRes feedCommentGetRes = commentHashMap.get(feedId);
+            // key - feedid 통해서 value - commentgetres 호출
+            feedCommentGetRes.getCommentList().add(item);
+            // commentGetRes (4) . commentDto ( item(feedId) )
+        }
+        // 위에서 만든 list (feedId) 를 가져옴
+        for(FeedGetRes res : list) {
+            // hashmap 을 통해서 key 값 feedid 를 가져오면 value인 pic 을 가져옴
+            // res.setpics 에 value - pic 을 입력
+            res.setPics(picHashMap.get(res.getFeedId()));
+            FeedCommentGetRes feedCommentGetRes = commentHashMap.get(res.getFeedId());
+            // feedid , pic 은 가져왔지만 댓글은 안가져왔음 if문 통해서 comment 입력
+            if(feedCommentGetRes == null) {
+                // 댓글 목록 에서 없으면 새로 만들고 배열이 0 인걸 만들어줌
+                feedCommentGetRes = new FeedCommentGetRes();
+                feedCommentGetRes.setCommentList(new ArrayList<>());
+            } else if (feedCommentGetRes.getCommentList().size() == 4) {
+                // 댓글이 4개면 morecomment 에서 true 판정 -> 3개 출력 + 1개는 더보기로 바뀌니 -1 작업
+                feedCommentGetRes.setMoreComment(true);
+                feedCommentGetRes.getCommentList().remove(feedCommentGetRes.getCommentList().size() - 1);
+            }
+            res.setComment(feedCommentGetRes);
+        }
+        log.info("list: {}", list);
+        return list;
     }
     @Transactional
     public int deleteFeed(FeedDeleteReq p) {

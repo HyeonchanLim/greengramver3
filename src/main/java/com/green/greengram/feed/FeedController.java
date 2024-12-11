@@ -35,7 +35,7 @@ public class FeedController {
     public ResultResponse<List<FeedGetRes>> getFeedList(@ParameterObject @ModelAttribute FeedGetReq p) {
         log.info("FeedController > getFeedList > p: {}", p);
         //List<FeedGetRes> list = service.getFeedList(p);
-        List<FeedGetRes> list = service.selFeedList(p);
+        List<FeedGetRes> list = service.getFeedList3(p);
         log.info("FeedController > getFeedList > aaaaaaaaa: {}", list);
         return ResultResponse.<List<FeedGetRes>>builder()
                 .resultMessage(String.format("%d rows", list.size()))

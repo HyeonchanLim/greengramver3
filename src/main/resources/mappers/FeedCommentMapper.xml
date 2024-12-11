@@ -24,6 +24,28 @@
         ORDER BY feed_comment_id DESC
         LIMIT #{startIdx} , #{size}
     </select>
+    <select id="selFeedCommentListByFeedIdsLimit4">
+        SELECT T.feedId, T.feedCommentId, T.comment, T.writerUserId, T.writerNm, T.writerPic
+        FROM (
+        SELECT ROW_NUMBER() OVER (PARTITION BY A.feed_id ORDER BY A.feed_id, A.feed_comment_id DESC) AS num
+        , A.feed_id AS feedId
+        , A.feed_comment_id AS feedCommentId
+        , A.comment
+        , B.user_id AS writerUserId
+        , IF(B.nick_name IS NULL, B.uid, B.nick_name) AS writerNm
+        , B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id IN <!-- feedIds 에 입력한 feed_id만 필터링  -->
+        <foreach collection="feedIds" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        ) T
+        WHERE T.num <![CDATA[ <= ]]> 4
+        <!-- sql 비교 연산자를 안전하게 작성하기 위해 사용
+         < > 는 xml 파서 라고 부름 -->
+    </select>
 
     <!-- 삭제 시 받아야 할 데이터 feedCommentId , 로그인한 사용자의 pk  -->
     <delete id="delFeedComment">
