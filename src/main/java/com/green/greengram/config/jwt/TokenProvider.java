@@ -55,15 +55,22 @@ public class TokenProvider {
     private String makeClaimByUserToString(JwtUser jwtUser){
         // 객체 자체를 jwt 에 담고 싶어서 객체를 직렬화
         // jwtUser 에 담았는 데이터를 JSON 형태의 문자열로 변환
+        // jwt - payload : 사용자 정보 (signeduserid , roles) 를 json 문자열로 담음
         try {
             return objectMapper.writeValueAsString(jwtUser);
+            // 객체 -> json 직렬화(writeValueAsString 사용) 문자열
+            // json -> 객체 역직렬화 (readValue 사용)
         } catch (JsonProcessingException e) {
+            // writeValueAsString 메서드는 내부적으로 i/o 작업을 수행하므로 JsonProcessingException 예외가 발생할 가능성 있음.
+            // 객체를 json 문자열로 변환할 때 문제가 생길 경우 발생
             throw new RuntimeException(e);
+            // 위에서 발생하는 문제를 런타임 예외로 변환하여 처리함
         }
     }
     public boolean validToken (String token){
         // jwt 복호화
         try {
+            // 토큰에서 claims 객체를 추출 (여기서 token 이 signature 부분 담당)
             getClaims(token);
             return true;
         } catch (Exception e){
@@ -87,16 +94,30 @@ public class TokenProvider {
 
         // 객체화 과정
         JwtUser jwtUser = objectMapper.convertValue(json,JwtUser.class);
+        // jwtuser 의 클래스 전부 컨버트
+        // JwtUser 클래스에 작성한 멤버필드 - signeduserid , roles 필드에 값을 매핑
+        // 그거를 문자열로 이루어진 jwtuser 에 객체로 변환
+        // json 에 멤버필드 2가지 키가 있어야 한다.
         MyUserDetails userDetails = new MyUserDetails();
         userDetails.setJwtUser(jwtUser);
-
+        // 위에 2가지 키 값을 myuserdetails 로 값 반환
+        // details 에서 for 반복문으로 role 입력 - signeduserid 마다 List<roles> 만들어줌
+        // 이게 json - header 부분에 적용
+        // set 객체 변환하면서 jwtuser 에 매핑
         return userDetails;
     }
     public Claims getClaims(String token){
+        // claims 는 jwt 의 payload 를 키 - 값 매핑으로 관리
+
         return Jwts.parser()
                 .verifyWith(secretKey)
                 .build()
                 .parseSignedClaims(token)
                 .getPayload();
+        // 1. jwt 파서 생성
+        // 2. 서명 검증(secretKey 사용)
+        // 3. 파서 빌드
+        // 4. 토큰의 payload를 파싱하여 claims 반환
+        // 5. payload 를 가져옴
     }
 }
