@@ -71,6 +71,8 @@ public class TokenProvider {
         // jwt 복호화
         try {
             // 토큰에서 claims 객체를 추출 (여기서 token 이 signature 부분 담당)
+            // 여기서 getclaims 의 signature 검증
+            // 이상이 없으면 true 반납하면서 payload 호출
             getClaims(token);
             return true;
         } catch (Exception e){
